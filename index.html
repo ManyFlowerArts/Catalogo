@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ManyFlowerArts</title>
+
+  <link rel="icon" type="image/png" href="Logo.png">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+  <div class="wp-site-blocks">
+    <main class="hero" id="inicio">
+      <header class="site-header">
+        <div class="alignwide site-header-inner">
+          <h1 class="site-title">ManyFlowerArts</h1>
+
+          <nav class="site-nav" aria-label="Menu principal">
+            <a href="#sobre">Sobre mim</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#contato">Contato</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="hero-content-wrap has-global-padding">
+        <div style="height:90px" aria-hidden="true" class="wp-block-spacer"></div>
+
+        <div class="alignwide">
+          <div class="hero-content">
+            <div style="height:24px" aria-hidden="true" class="wp-block-spacer"></div>
+
+            <p class="hero-kicker has-josefin-sans-font-family">MANY FLOWER ARTS</p>
+
+            <h2 class="hero-title has-libre-baskerville-font-family">Saia do padrão, faça</h2>
+
+            <h2 class="hero-title has-libre-baskerville-font-family">sua festa ser <strong><em>única!</em></strong></h2>
+
+            <a href="#catalogo" class="hero-catalog-btn">Veja nosso catálogo</a>
+          </div>
+        </div>
+
+        <div style="height:140px" aria-hidden="true" class="wp-block-spacer"></div>
+      </div>
+    </main>
+
+    <section class="about-section has-global-padding" id="sobre">
+      <div class="about-wrap">
+        <div class="about-top">
+          <div class="about-left">
+            <div class="about-heading">
+              <img src="images/Flower1.png" alt="" class="about-flower-1">
+              <h2 class="about-title has-libre-baskerville-font-family">Quem sou eu?</h2>
+            </div>
+
+            <p class="about-text has-libre-baskerville-font-family">
+              Meu nome é Mani, e eu sou decoradora,<br>
+              florista e artista! a anos produzo minhas<br>
+              peças feitas a mão para vender ou alugar<br>
+              para festas! Minha especialidade é criar<br>
+              minhas próprias peças ou tornar <em>suas</em> ideias<br>
+              que parecem impossíveis em <em>realidade!</em>
+            </p>
+          </div>
+
+          <div class="about-right">
+            <p class="about-dior-note has-libre-baskerville-font-family">
+              Vestido de flores feito para <em>Miss Dior</em>, ideia da cliente e feita por mim
+            </p>
+
+            <div class="about-dior-card">
+              <img src="images/Flower2.png" alt="" class="about-flower-2">
+              <img
+                src="images/DiorDress.png"
+                alt="Vestido de flores feito para Miss Dior"
+                class="about-dior-img"
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="about-bottom">
+          <div class="about-boat-group">
+            <img
+              src="images/CoconutBoat.png"
+              alt="Mani em uma barca com cocos"
+              class="about-boat-img"
+            >
+            <p class="about-boat-caption has-libre-baskerville-font-family">
+              Eu em uma barca com textura de madeira, ideia da<br>
+              cliente feita por mim!
+            </p>
+          </div>
+
+          <div class="about-vase-group">
+            <img
+              src="images/SandVase.png"
+              alt="Vaso de areia projetado e executado por Mani"
+              class="about-vase-img"
+            >
+            <p class="about-vase-caption has-libre-baskerville-font-family">
+              Vasos de areia projetados e executados por<br>
+              mim, trabalho rustico feito a mão
+            </p>
+            <img src="images/Flower3.png" alt="" class="about-flower-3">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div style="height:20px" aria-hidden="true" class="wp-block-spacer catalog-spacer-fix"></div>
+
+    <section class="mfa-catalogo-ar" id="catalogo">
+      <div class="mfa-topo">
+        <div class="mfa-preview">
+          <div class="mfa-preview-card">
+            <img src="images/OfficeBg.png" alt="Ambiente" class="mfa-room-bg">
+
+            <model-viewer
+              class="mfa-showcase-model"
+              src="showcase.glb"
+              camera-controls
+              auto-rotate
+              shadow-intensity="1"
+              exposure="1"
+              style="background: transparent;"
+              disable-zoom>
+            </model-viewer>
+          </div>
+
+          <button class="mfa-btn-ar" type="button">
+            EXPERIMENTE AGORA
+          </button>
+        </div>
+
+        <div class="mfa-texto">
+          <h2>
+            Não fique só no <em>papel</em>, veja nossas peças na sua <em>casa!</em>
+          </h2>
+          <p>
+            Nosso catálogo permite que você posicione o objeto na sua casa usando a
+            <em>Câmera do seu Celular!</em> para experimentar como nossos vasos são
+            pessoalmente sem precisar sair de casa!
+          </p>
+        </div>
+      </div>
+
+      <div class="mfa-catalog-slider">
+        <div class="mfa-catalog-viewport">
+          <div class="mfa-catalog-track" id="catalogTrack">
+            <div class="mfa-catalog-page">
+              <div class="mfa-grid">
+                <div
+                  class="mfa-item mfa-product-card"
+                  data-product-card
+                  data-start-index="0"
+                >
+                  <button class="mfa-product-arrow mfa-product-arrow-left" type="button" data-product-prev aria-label="Imagem anterior">
+                    &#10094;
+                  </button>
+
+                  <div class="mfa-product-stage is-active" data-product-stage="0">
+                    <img
+                      src="Produtos/Vaso Pedra/PedraThumb.png"
+                      alt="Vaso Pedra"
+                      class="mfa-product-image"
+                    >
+                  </div>
+
+                  <div class="mfa-product-stage" data-product-stage="1">
+                    <img
+                      src="Produtos/Vaso Pedra/PedraAlt1.png"
+                      alt="Vaso Pedra - imagem alternativa"
+                      class="mfa-product-image"
+                    >
+                  </div>
+
+                  <div class="mfa-product-stage mfa-product-model-stage" data-product-stage="2">
+                    <model-viewer
+                      src="Produtos/Vaso Pedra/PEDRA.glb"
+                      class="mfa-product-model"
+                      camera-controls
+                      auto-rotate
+                      auto-rotate-delay="0"
+                      rotation-per-second="12deg"
+                      shadow-intensity="1"
+                      exposure="1"
+                      disable-zoom
+                      interaction-prompt="none"
+                      touch-action="pan-y"
+                      style="background: transparent;"
+                    >
+                    </model-viewer>
+                  </div>
+
+                  <button class="mfa-product-arrow mfa-product-arrow-right" type="button" data-product-next aria-label="Próxima imagem">
+                    &#10095;
+                  </button>
+                </div>
+
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+              </div>
+            </div>
+
+            <div class="mfa-catalog-page">
+              <div class="mfa-grid">
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+              </div>
+            </div>
+
+            <div class="mfa-catalog-page">
+              <div class="mfa-grid mfa-grid-last">
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+                <a class="mfa-item" href="#"><img src="" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mfa-catalog-controls">
+          <button class="mfa-page-btn is-disabled" id="catalogPrev" type="button" aria-label="Página anterior">
+            ← Anterior
+          </button>
+
+          <div class="mfa-page-indicator">
+            <span class="mfa-page-dot is-active"></span>
+            <span class="mfa-page-dot"></span>
+            <span class="mfa-page-dot"></span>
+          </div>
+
+          <button class="mfa-page-btn" id="catalogNext" type="button" aria-label="Próxima página">
+            Próxima →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="contato">
+      <div class="footer-inner">
+        <h2 class="footer-title has-libre-baskerville-font-family">Fale Conosco</h2>
+
+        <div class="footer-content">
+          <div class="footer-left">
+            <div class="footer-block">
+              <p class="footer-label">WHATSAPP</p>
+              <a href="https://wa.me/5511993533153" class="footer-value" target="_blank" rel="noopener">
+                (11) 993533153
+              </a>
+            </div>
+
+            <div class="footer-block">
+              <p class="footer-label">SOCIAL</p>
+              <div class="footer-social">
+                <a href="#" aria-label="Facebook" class="footer-social-link" target="_blank" rel="noopener">
+                  <img src="images/FacebookLogo.png" alt="Facebook" class="footer-social-icon">
+                </a>
+                <a href="#" aria-label="Instagram" class="footer-social-link" target="_blank" rel="noopener">
+                  <img src="images/InstagramLogo.png" alt="Instagram" class="footer-social-icon">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-right">
+            <div class="footer-block">
+              <p class="footer-label">EMAIL</p>
+              <a href="mailto:Maniflowerarts@gmail.com" class="footer-value">
+                Maniflowerarts@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const track = document.getElementById('catalogTrack');
+      const prevBtn = document.getElementById('catalogPrev');
+      const nextBtn = document.getElementById('catalogNext');
+      const dots = document.querySelectorAll('.mfa-page-dot');
+      const totalPages = 3;
+      let currentPage = 0;
+
+      function updateSlider() {
+        track.style.transform = `translateX(-${currentPage * (100 / totalPages)}%)`;
+
+        prevBtn.classList.toggle('is-disabled', currentPage === 0);
+        nextBtn.classList.toggle('is-disabled', currentPage === totalPages - 1);
+
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('is-active', index === currentPage);
+        });
+      }
+
+      prevBtn.addEventListener('click', function () {
+        if (currentPage > 0) {
+          currentPage--;
+          updateSlider();
+        }
+      });
+
+      nextBtn.addEventListener('click', function () {
+        if (currentPage < totalPages - 1) {
+          currentPage++;
+          updateSlider();
+        }
+      });
+
+      updateSlider();
+    })();
+
+    (function () {
+      const AUTO_DELAY = 2200;
+
+      function showStage(card, index) {
+        const stages = card.querySelectorAll('[data-product-stage]');
+        const total = stages.length;
+        const normalizedIndex = ((index % total) + total) % total;
+
+        stages.forEach((stage, stageIndex) => {
+          stage.classList.toggle('is-active', stageIndex === normalizedIndex);
+        });
+
+        card.dataset.currentIndex = String(normalizedIndex);
+      }
+
+      function getCurrentIndex(card) {
+        return Number(card.dataset.currentIndex || 0);
+      }
+
+      function stopCycle(card) {
+        if (card._cycleInterval) {
+          clearInterval(card._cycleInterval);
+          card._cycleInterval = null;
+        }
+      }
+
+      function startCycle(card) {
+        stopCycle(card);
+        card._cycleInterval = setInterval(() => {
+          const nextIndex = getCurrentIndex(card) + 1;
+          showStage(card, nextIndex);
+        }, AUTO_DELAY);
+      }
+
+      document.querySelectorAll('[data-product-card]').forEach((card) => {
+        const startIndex = Number(card.dataset.startIndex || 0);
+
+        showStage(card, startIndex);
+
+        card.addEventListener('mouseenter', () => {
+          showStage(card, 0);
+          startCycle(card);
+        });
+
+        card.addEventListener('mouseleave', () => {
+          stopCycle(card);
+          showStage(card, 0);
+        });
+
+        const prev = card.querySelector('[data-product-prev]');
+        const next = card.querySelector('[data-product-next]');
+
+        prev.addEventListener('click', (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          stopCycle(card);
+          showStage(card, getCurrentIndex(card) - 1);
+          if (card.matches(':hover')) {
+            startCycle(card);
+          }
+        });
+
+        next.addEventListener('click', (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          stopCycle(card);
+          showStage(card, getCurrentIndex(card) + 1);
+          if (card.matches(':hover')) {
+            startCycle(card);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
