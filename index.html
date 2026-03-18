@@ -35,7 +35,6 @@
             <p class="hero-kicker has-josefin-sans-font-family">MANY FLOWER ARTS</p>
 
             <h2 class="hero-title has-libre-baskerville-font-family">Saia do padrão, faça</h2>
-
             <h2 class="hero-title has-libre-baskerville-font-family">sua festa ser <strong><em>única!</em></strong></h2>
 
             <a href="#catalogo" class="hero-catalog-btn">Veja nosso catálogo</a>
@@ -178,6 +177,8 @@
                   </div>
 
                   <div class="mfa-product-stage mfa-product-model-stage" data-product-stage="2">
+                    <div class="mfa-product-model-loading">Carregando modelo...</div>
+
                     <model-viewer
                       src="Produtos/Vaso Pedra/PEDRA.glb"
                       class="mfa-product-model"
@@ -189,6 +190,7 @@
                       exposure="1"
                       disable-zoom
                       interaction-prompt="none"
+                      reveal="auto"
                       touch-action="pan-y"
                       style="background: transparent;"
                     >
@@ -341,6 +343,11 @@
         });
 
         card.dataset.currentIndex = String(normalizedIndex);
+
+        const model = card.querySelector('.mfa-product-model');
+        if (model && normalizedIndex === 2) {
+          model.dismissPoster?.();
+        }
       }
 
       function getCurrentIndex(card) {
@@ -364,6 +371,18 @@
 
       document.querySelectorAll('[data-product-card]').forEach((card) => {
         const startIndex = Number(card.dataset.startIndex || 0);
+        const model = card.querySelector('.mfa-product-model');
+        const loading = card.querySelector('.mfa-product-model-loading');
+
+        if (model && loading) {
+          model.addEventListener('load', () => {
+            loading.style.display = 'none';
+          });
+
+          model.addEventListener('error', () => {
+            loading.textContent = 'Erro ao carregar modelo';
+          });
+        }
 
         showStage(card, startIndex);
 
