@@ -151,29 +151,15 @@
           <div class="mfa-catalog-track" id="catalogTrack">
             <div class="mfa-catalog-page">
               <div class="mfa-grid">
-                <div
-                  class="mfa-item mfa-product-card"
-                  data-product-card
-                  data-start-index="0"
-                >
-                  <button class="mfa-product-arrow mfa-product-arrow-left" type="button" data-product-prev aria-label="Imagem anterior">
-                    &#10094;
-                  </button>
+                <div class="mfa-item mfa-product-card" data-product-card data-start-index="0">
+                  <button class="mfa-product-arrow mfa-product-arrow-left" type="button" data-product-prev aria-label="Imagem anterior">&#10094;</button>
 
                   <div class="mfa-product-stage is-active" data-product-stage="0">
-                    <img
-                      src="Produtos/Vaso Pedra/PedraThumb.png"
-                      alt="Vaso Pedra"
-                      class="mfa-product-image"
-                    >
+                    <img src="Produtos/Vaso Pedra/PedraThumb.png" alt="Vaso Pedra" class="mfa-product-image">
                   </div>
 
                   <div class="mfa-product-stage" data-product-stage="1">
-                    <img
-                      src="Produtos/Vaso Pedra/PedraAlt1.png"
-                      alt="Vaso Pedra - imagem alternativa"
-                      class="mfa-product-image"
-                    >
+                    <img src="Produtos/Vaso Pedra/PedraAlt1.png" alt="Vaso Pedra - imagem alternativa" class="mfa-product-image">
                   </div>
 
                   <div class="mfa-product-stage mfa-product-model-stage" data-product-stage="2">
@@ -192,14 +178,11 @@
                       interaction-prompt="none"
                       reveal="auto"
                       touch-action="pan-y"
-                      style="background: transparent;"
-                    >
+                      style="background: transparent;">
                     </model-viewer>
                   </div>
 
-                  <button class="mfa-product-arrow mfa-product-arrow-right" type="button" data-product-next aria-label="Próxima imagem">
-                    &#10095;
-                  </button>
+                  <button class="mfa-product-arrow mfa-product-arrow-right" type="button" data-product-next aria-label="Próxima imagem">&#10095;</button>
                 </div>
 
                 <a class="mfa-item" href="#"><img src="" alt=""></a>
@@ -304,7 +287,6 @@
 
       function updateSlider() {
         track.style.transform = `translateX(-${currentPage * (100 / totalPages)}%)`;
-
         prevBtn.classList.toggle('is-disabled', currentPage === 0);
         nextBtn.classList.toggle('is-disabled', currentPage === totalPages - 1);
 
