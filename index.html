@@ -359,8 +359,19 @@
       function startCycle(card) {
         stopCycle(card);
         card._cycleInterval = setInterval(() => {
-          const nextIndex = getCurrentIndex(card) + 1;
+          const currentIndex = getCurrentIndex(card);
+
+          if (currentIndex >= 2) {
+            stopCycle(card);
+            return;
+          }
+
+          const nextIndex = currentIndex + 1;
           showStage(card, nextIndex);
+
+          if (nextIndex >= 2) {
+            stopCycle(card);
+          }
         }, AUTO_DELAY);
       }
 
@@ -399,9 +410,6 @@
           event.stopPropagation();
           stopCycle(card);
           showStage(card, getCurrentIndex(card) - 1);
-          if (card.matches(':hover')) {
-            startCycle(card);
-          }
         });
 
         next.addEventListener('click', (event) => {
@@ -409,9 +417,6 @@
           event.stopPropagation();
           stopCycle(card);
           showStage(card, getCurrentIndex(card) + 1);
-          if (card.matches(':hover')) {
-            startCycle(card);
-          }
         });
       });
     })();
