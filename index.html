@@ -6,42 +6,91 @@
   <title>ManyFlowerArts</title>
 
   <link rel="icon" type="image/png" href="Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rhodium+Libre&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 
 <body>
   <div class="wp-site-blocks">
-    <main class="hero" id="inicio">
-      <header class="site-header">
-        <div class="alignwide site-header-inner">
-          <h1 class="site-title">ManyFlowerArts</h1>
+    <main class="hero hero-collections" id="inicio">
+      <div class="hero-collections-slider" id="heroCollectionsSlider">
+        <div class="hero-collection-bg" id="heroCollectionBg"></div>
 
-          <nav class="site-nav" aria-label="Menu principal">
-            <a href="#sobre">Sobre mim</a>
-            <a href="#catalogo">Catálogo</a>
-            <a href="#contato">Contato</a>
-          </nav>
-        </div>
-      </header>
+        <header class="site-header">
+          <div class="alignwide site-header-inner">
+            <h1 class="site-title">ManyFlowerArts</h1>
 
-      <div class="hero-content-wrap has-global-padding">
-        <div style="height:90px" aria-hidden="true" class="wp-block-spacer"></div>
+            <nav class="site-nav" aria-label="Menu principal">
+              <a href="#sobre">Sobre mim</a>
+              <a href="#catalogo">Catálogo</a>
+              <a href="#contato">Contato</a>
+            </nav>
+          </div>
+        </header>
 
-        <div class="alignwide">
-          <div class="hero-content">
-            <div style="height:24px" aria-hidden="true" class="wp-block-spacer"></div>
+        <div class="hero-content-wrap has-global-padding">
+          <div class="alignwide hero-collections-inner">
+            <div class="hero-left">
+              <div style="height:56px" aria-hidden="true" class="wp-block-spacer"></div>
 
-            <p class="hero-kicker has-josefin-sans-font-family">MANY FLOWER ARTS</p>
+              <div class="hero-content">
+                <p class="hero-kicker has-josefin-sans-font-family">MANY FLOWER ARTS</p>
 
-            <h2 class="hero-title has-libre-baskerville-font-family">Saia do padrão, faça</h2>
-            <h2 class="hero-title has-libre-baskerville-font-family">sua festa ser <strong><em>única!</em></strong></h2>
+                <div class="hero-title-stack">
+                  <div class="hero-title-box hero-title-box-light">
+                    <h2 class="hero-title has-libre-baskerville-font-family">Saia do padrão,</h2>
+                  </div>
 
-            <a href="#catalogo" class="hero-catalog-btn">Veja nosso catálogo</a>
+                  <div class="hero-title-box hero-title-box-dark">
+                    <h2 class="hero-title has-libre-baskerville-font-family">Faça sua festa ser <strong><em>única.</em></strong></h2>
+                  </div>
+                </div>
+
+                <a href="#catalogo" class="hero-catalog-btn">Veja nosso catálogo</a>
+              </div>
+            </div>
+
+            <div class="hero-right">
+              <div class="hero-art-area">
+                <img id="heroCollectionVector" class="hero-collection-vector" src="" alt="">
+                <model-viewer
+                  id="heroCollectionModel"
+                  class="hero-collection-model"
+                  src=""
+                  camera-controls
+                  auto-rotate
+                  auto-rotate-delay="0"
+                  rotation-per-second="14deg"
+                  shadow-intensity="1"
+                  exposure="1"
+                  interaction-prompt="none"
+                  disable-zoom
+                  touch-action="pan-y"
+                  style="background: transparent;">
+                </model-viewer>
+
+                <div class="hero-collection-copy">
+                  <p class="hero-collection-subtitle has-libre-baskerville-font-family">
+                    Veja nossas coleção
+                  </p>
+                  <h3 id="heroCollectionName" class="hero-collection-title">DUNAS</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-collections-controls">
+            <button type="button" class="hero-collections-arrow" id="heroPrev" aria-label="Coleção anterior">‹</button>
+
+            <div class="hero-collections-dots" id="heroDots"></div>
+
+            <button type="button" class="hero-collections-arrow" id="heroNext" aria-label="Próxima coleção">›</button>
           </div>
         </div>
-
-        <div style="height:140px" aria-hidden="true" class="wp-block-spacer"></div>
       </div>
     </main>
 
@@ -152,24 +201,14 @@
             <div class="mfa-catalog-page">
               <div class="mfa-grid">
                 <div class="mfa-item mfa-product-card" data-product-card data-start-index="0">
-                  <button class="mfa-product-arrow mfa-product-arrow-left" type="button" data-product-prev aria-label="Imagem anterior">
-                    &#10094;
-                  </button>
+                  <button class="mfa-product-arrow mfa-product-arrow-left" type="button" data-product-prev aria-label="Imagem anterior">&#10094;</button>
 
                   <div class="mfa-product-stage is-active" data-product-stage="0">
-                    <img
-                      src="Produtos/Vaso Pedra/PedraThumb.png"
-                      alt="Vaso Pedra"
-                      class="mfa-product-image"
-                    >
+                    <img src="Produtos/Vaso Pedra/PedraThumb.png" alt="Vaso Pedra" class="mfa-product-image">
                   </div>
 
                   <div class="mfa-product-stage" data-product-stage="1">
-                    <img
-                      src="Produtos/Vaso Pedra/PedraAlt1.png"
-                      alt="Vaso Pedra - imagem alternativa"
-                      class="mfa-product-image"
-                    >
+                    <img src="Produtos/Vaso Pedra/PedraAlt1.png" alt="Vaso Pedra - imagem alternativa" class="mfa-product-image">
                   </div>
 
                   <div class="mfa-product-stage mfa-product-model-stage" data-product-stage="2">
@@ -188,14 +227,11 @@
                       interaction-prompt="none"
                       reveal="auto"
                       touch-action="pan-y"
-                      style="background: transparent;"
-                    >
+                      style="background: transparent;">
                     </model-viewer>
                   </div>
 
-                  <button class="mfa-product-arrow mfa-product-arrow-right" type="button" data-product-next aria-label="Próxima imagem">
-                    &#10095;
-                  </button>
+                  <button class="mfa-product-arrow mfa-product-arrow-right" type="button" data-product-next aria-label="Próxima imagem">&#10095;</button>
                 </div>
 
                 <a class="mfa-item" href="#"><img src="" alt=""></a>
@@ -419,6 +455,105 @@
           showStage(card, getCurrentIndex(card) + 1);
         });
       });
+    })();
+
+    (function () {
+      const heroBg = document.getElementById('heroCollectionBg');
+      const heroVector = document.getElementById('heroCollectionVector');
+      const heroModel = document.getElementById('heroCollectionModel');
+      const heroName = document.getElementById('heroCollectionName');
+      const dotsWrap = document.getElementById('heroDots');
+      const prevBtn = document.getElementById('heroPrev');
+      const nextBtn = document.getElementById('heroNext');
+
+      const collections = [
+        {
+          name: 'DUNAS',
+          folder: 'Colecoes/Dunas',
+          bg: 'Colecoes/Dunas/bg.png',
+          vector: 'Colecoes/Dunas/vetor.png',
+          models: ['Duna1.glb']
+        },
+        {
+          name: 'LAYERS',
+          folder: 'Colecoes/Layers',
+          bg: 'Colecoes/Layers/bg.png',
+          vector: 'Colecoes/Layers/vetor.png',
+          models: ['Duna1.glb']
+        },
+        {
+          name: 'CRAQUELADOS',
+          folder: 'Colecoes/Craquelados',
+          bg: 'Colecoes/Craquelados/bg.png',
+          vector: 'Colecoes/Craquelados/vetor.png',
+          models: ['Duna1.glb']
+        }
+      ];
+
+      let currentCollection = 0;
+      let heroInterval = null;
+
+      function getRandomModel(collection) {
+        if (!collection.models || !collection.models.length) return '';
+        const randomIndex = Math.floor(Math.random() * collection.models.length);
+        return `${collection.folder}/models/${collection.models[randomIndex]}`;
+      }
+
+      function renderDots() {
+        dotsWrap.innerHTML = '';
+        collections.forEach((_, index) => {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'hero-dot' + (index === currentCollection ? ' is-active' : '');
+          dot.setAttribute('aria-label', `Ir para coleção ${index + 1}`);
+          dot.addEventListener('click', () => {
+            currentCollection = index;
+            updateHeroCollection();
+            restartHeroAuto();
+          });
+          dotsWrap.appendChild(dot);
+        });
+      }
+
+      function updateHeroCollection() {
+        const collection = collections[currentCollection];
+        heroBg.style.backgroundImage = `url('${collection.bg}')`;
+        heroVector.src = collection.vector;
+        heroVector.alt = `Ilustração da coleção ${collection.name}`;
+        heroModel.src = getRandomModel(collection);
+        heroName.textContent = collection.name;
+        renderDots();
+      }
+
+      function nextCollection() {
+        currentCollection = (currentCollection + 1) % collections.length;
+        updateHeroCollection();
+      }
+
+      function prevCollection() {
+        currentCollection = (currentCollection - 1 + collections.length) % collections.length;
+        updateHeroCollection();
+      }
+
+      function restartHeroAuto() {
+        if (heroInterval) clearInterval(heroInterval);
+        heroInterval = setInterval(() => {
+          nextCollection();
+        }, 5000);
+      }
+
+      prevBtn.addEventListener('click', () => {
+        prevCollection();
+        restartHeroAuto();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        nextCollection();
+        restartHeroAuto();
+      });
+
+      updateHeroCollection();
+      restartHeroAuto();
     })();
   </script>
 </body>
