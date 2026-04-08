@@ -209,8 +209,8 @@ button {
   position: absolute;
   right: 70px;
   top: 175px;
-  width: 410px;
-  height: 410px;
+  width: 1000px;
+  height: 1000px;
   z-index: 7;
   pointer-events: auto;
 }
