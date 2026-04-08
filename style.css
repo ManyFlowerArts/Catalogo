@@ -1,425 +1,170 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ManyFlowerArts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-content">
+      <a href="#" class="logo">ManyFlowerArts</a>
 
-html {
-  scroll-behavior: smooth;
-}
+      <nav class="nav">
+        <a href="#sobre">Sobre mim</a>
+        <a href="#catalogo-blocos">Catálogo</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
 
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background: #f5f1ea;
-  color: #111;
-  overflow-x: hidden;
-}
+  <main>
+    <section class="hero" id="catalogo">
+      <div class="hero-slider" id="heroSlider">
+        <div class="hero-bg" id="heroBg"></div>
+        <div class="hero-overlay"></div>
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+        <div class="hero-layout">
+          <div class="hero-left">
+            <span class="hero-kicker">MANY FLOWER ARTS</span>
 
-button {
-  font: inherit;
-}
+            <h1 class="hero-title">
+              <span class="line line-light">Saia do padrão,</span>
+              <span class="line line-dark">Faça sua festa ser <em>única.</em></span>
+            </h1>
 
-.container {
-  width: min(1280px, calc(100% - 40px));
-  margin: 0 auto;
-}
+            <a href="#catalogo-blocos" class="hero-button">Veja nosso catálogo</a>
+          </div>
 
-.topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  background: rgba(94, 105, 86, 0.82);
-  backdrop-filter: blur(8px);
-}
+          <div class="hero-right">
+            <div class="collection-card">
+              <p class="collection-subtitle">Veja nossa coleção</p>
+              <h2 class="collection-title" id="collectionTitle">DUNAS</h2>
+            </div>
 
-.topbar-content {
-  min-height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+            <div class="model-wrap">
+              <model-viewer
+                id="collectionModel"
+                src=""
+                alt="Modelo 3D da coleção"
+                camera-controls
+                disable-pan
+                auto-rotate
+                rotation-per-second="20deg"
+                shadow-intensity="1"
+                exposure="1"
+                environment-image="neutral"
+                interaction-prompt="none"
+                loading="eager"
+              ></model-viewer>
+            </div>
+          </div>
+        </div>
 
-.logo {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #fff;
-}
+        <div class="slider-controls">
+          <button class="slider-arrow" id="prevSlide" aria-label="Slide anterior">‹</button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-arrow" id="nextSlide" aria-label="Próximo slide">›</button>
+        </div>
+      </div>
+    </section>
 
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 36px;
-}
+    <section class="about-section" id="sobre">
+      <div class="container about-grid">
+        <div class="section-heading">
+          <span class="section-tag">Sobre mim</span>
+          <h2>Arte floral para festas que fogem do comum.</h2>
+        </div>
 
-.nav a {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-}
+        <div class="about-text">
+          <p>
+            A ManyFlowerArts cria composições florais autorais com identidade marcante,
+            combinando texturas, volumes e elementos decorativos para transformar mesas,
+            cenários e celebrações em experiências visuais únicas.
+          </p>
 
-.hero {
-  min-height: 100vh;
-}
+          <p>
+            Cada coleção é pensada para transmitir personalidade e tornar o evento memorável,
+            com peças que vão do delicado ao ousado sem perder a elegância.
+          </p>
+        </div>
+      </div>
+    </section>
 
-.hero-slider {
-  position: relative;
-  min-height: 100vh;
-  overflow: hidden;
-}
+    <section class="catalog-section" id="catalogo-blocos">
+      <div class="container">
+        <div class="section-heading section-heading-center">
+          <span class="section-tag">Catálogo</span>
+          <h2>Nossas coleções</h2>
+        </div>
 
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  transition: background-image 0.6s ease-in-out;
-  z-index: 0;
-}
+        <div class="catalog-grid">
+          <article class="catalog-card">
+            <div
+              class="catalog-image"
+              style="background-image: url('./Colecoes/Dunas/bg.png');"
+            ></div>
+            <div class="catalog-card-content">
+              <h3>Dunas</h3>
+              <p>
+                Tons naturais, texturas orgânicas e uma presença sofisticada inspirada
+                em paisagens áridas e elegantes.
+              </p>
+            </div>
+          </article>
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(to right, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0)),
-    linear-gradient(to top, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0));
-  z-index: 1;
-}
+          <article class="catalog-card">
+            <div
+              class="catalog-image"
+              style="background-image: url('./Colecoes/Layers/bg.png');"
+            ></div>
+            <div class="catalog-card-content">
+              <h3>Layers</h3>
+              <p>
+                Sobreposições visuais, profundidade e composições com leitura moderna
+                para eventos com identidade marcante.
+              </p>
+            </div>
+          </article>
 
-.hero-layout {
-  position: relative;
-  z-index: 5;
-  min-height: 100vh;
-  width: 100%;
-}
+          <article class="catalog-card">
+            <div
+              class="catalog-image"
+              style="background-image: url('./Colecoes/Craquelados/bg.png');"
+            ></div>
+            <div class="catalog-card-content">
+              <h3>Craquelados</h3>
+              <p>
+                Formas expressivas e superfícies cheias de personalidade para produções
+                que querem sair completamente do óbvio.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-.hero-left {
-  position: absolute;
-  top: 118px;
-  left: 28px;
-  width: min(760px, 46vw);
-  z-index: 8;
-}
+    <section class="contact-section" id="contato">
+      <div class="container contact-box">
+        <div class="contact-left">
+          <span class="section-tag">Contato</span>
+          <h2>Vamos criar algo único para a sua festa?</h2>
+          <p>
+            Entre em contato para orçamento, dúvidas ou para conhecer melhor as coleções
+            disponíveis da ManyFlowerArts.
+          </p>
+        </div>
 
-.hero-kicker {
-  display: inline-block;
-  margin-bottom: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.95rem;
-  letter-spacing: 0.04em;
-  color: #fff;
-  text-transform: uppercase;
-}
+        <div class="contact-right">
+          <a href="#" class="contact-button">Falar no WhatsApp</a>
+          <a href="#" class="contact-button contact-button-outline">Ver catálogo</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-.hero-title {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  line-height: 0.92;
-  margin-bottom: 24px;
-}
-
-.hero-title .line {
-  display: inline-block;
-  padding: 8px 16px 10px;
-  font-size: clamp(2.6rem, 4.1vw, 4.9rem);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-.hero-title .line-light {
-  background: rgba(255, 255, 255, 0.86);
-  color: #000;
-}
-
-.hero-title .line-dark {
-  background: rgba(0, 0, 0, 0.9);
-  color: #fff;
-}
-
-.hero-title em {
-  font-style: italic;
-}
-
-.hero-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 54px;
-  padding: 0 28px;
-  border-radius: 999px;
-  background: #fff;
-  color: #111;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.hero-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
-}
-
-.hero-right {
-  position: absolute;
-  inset: 0;
-  z-index: 6;
-}
-
-.collection-card {
-  position: absolute;
-  right: 270px;
-  bottom: 120px;
-  width: 420px;
-  min-height: 220px;
-  padding: 112px 26px 22px;
-  border-radius: 0;
-  background: transparent;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  z-index: 6;
-  box-shadow: none;
-}
-
-.collection-subtitle {
-  color: #fff;
-  font-size: clamp(1.35rem, 2.05vw, 2.2rem);
-  line-height: 1;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
-}
-
-.collection-title {
-  color: #fff;
-  font-size: clamp(3.3rem, 4.6vw, 5.3rem);
-  line-height: 0.9;
-  text-transform: uppercase;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
-}
-
-.model-wrap {
-  position: absolute;
-  right: 80px;
-  top: 165px;
-  width: 430px;
-  height: 430px;
-  z-index: 7;
-  pointer-events: auto;
-}
-
-model-viewer {
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  --poster-color: transparent;
-}
-
-.slider-controls {
-  position: absolute;
-  left: 50%;
-  bottom: 26px;
-  transform: translateX(-50%);
-  z-index: 12;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.slider-arrow {
-  width: 48px;
-  height: 48px;
-  border: none;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
-  color: #222;
-  font-size: 2rem;
-  line-height: 1;
-  cursor: pointer;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.slider-arrow:hover {
-  transform: scale(1.05);
-  background: #fff;
-}
-
-.slider-dots {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.slider-dot {
-  width: 11px;
-  height: 11px;
-  border: none;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.55);
-  cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.slider-dot.active {
-  background: #fff;
-  transform: scale(1.15);
-}
-
-.placeholder-section {
-  padding: 100px 0;
-  background: #f5f1ea;
-}
-
-.placeholder-section:nth-of-type(even) {
-  background: #efe8dd;
-}
-
-.placeholder-section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 14px;
-}
-
-.placeholder-section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-@media (max-width: 1280px) {
-  .hero-left {
-    left: 22px;
-    top: 116px;
-    width: min(660px, 48vw);
-  }
-
-  .hero-title .line {
-    font-size: clamp(2.2rem, 4vw, 4.2rem);
-  }
-
-  .collection-card {
-    right: 210px;
-    bottom: 110px;
-    width: 370px;
-    min-height: 205px;
-    padding: 100px 22px 20px;
-  }
-
-  .collection-subtitle {
-    font-size: clamp(1.2rem, 1.9vw, 2rem);
-  }
-
-  .collection-title {
-    font-size: clamp(2.9rem, 4.3vw, 4.7rem);
-  }
-
-  .model-wrap {
-    right: 60px;
-    top: 210px;
-    width: 320px;
-    height: 320px;
-  }
-}
-
-@media (max-width: 980px) {
-  .hero-layout {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 100px;
-    padding-bottom: 120px;
-  }
-
-  .hero-left {
-    position: relative;
-    top: auto;
-    left: auto;
-    width: calc(100% - 24px);
-    max-width: 720px;
-    margin: 0 12px 28px;
-  }
-
-  .hero-right {
-    position: relative;
-    width: 100%;
-    height: 430px;
-    inset: auto;
-  }
-
-  .collection-card {
-    right: 50%;
-    bottom: 24px;
-    transform: translateX(50%);
-    width: min(390px, calc(100% - 24px));
-    min-height: 195px;
-    padding: 86px 18px 18px;
-  }
-
-  .model-wrap {
-    right: 50%;
-    top: 0;
-    transform: translateX(72%);
-    width: 240px;
-    height: 240px;
-  }
-}
-
-@media (max-width: 560px) {
-  .topbar-content {
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px 0;
-  }
-
-  .nav {
-    gap: 14px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .hero-left {
-    width: calc(100% - 20px);
-    margin: 0 10px 20px;
-  }
-
-  .hero-title .line {
-    font-size: clamp(1.8rem, 8vw, 2.8rem);
-    padding: 8px 12px 10px;
-  }
-
-  .hero-button {
-    min-height: 50px;
-    padding: 0 22px;
-    font-size: 0.96rem;
-  }
-
-  .hero-right {
-    height: 320px;
-  }
-
-  .collection-card {
-    min-height: 170px;
-    padding: 74px 16px 16px;
-  }
-
-  .collection-subtitle {
-    font-size: 1rem;
-  }
-
-  .collection-title {
-    font-size: 2.2rem;
-  }
-
-  .model-wrap {
-    width: 190px;
-    height: 190px;
-    transform: translateX(64%);
-  }
-}
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
