@@ -207,10 +207,10 @@ button {
 
 .model-wrap {
   position: absolute;
-  right: 70px;
-  top: 175px;
-  width: 1000px;
-  height: 1000px;
+  right: 80px;
+  top: 165px;
+  width: 430px;
+  height: 430px;
   z-index: 7;
   pointer-events: auto;
 }
@@ -273,6 +273,25 @@ model-viewer {
   transform: scale(1.15);
 }
 
+.placeholder-section {
+  padding: 100px 0;
+  background: #f5f1ea;
+}
+
+.placeholder-section:nth-of-type(even) {
+  background: #efe8dd;
+}
+
+.placeholder-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+
+.placeholder-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
 @media (max-width: 1280px) {
   .hero-left {
     left: 22px;
@@ -302,9 +321,9 @@ model-viewer {
 
   .model-wrap {
     right: 60px;
-    top: 225px;
-    width: 280px;
-    height: 280px;
+    top: 210px;
+    width: 320px;
+    height: 320px;
   }
 }
 
